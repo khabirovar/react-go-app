@@ -1,0 +1,11 @@
+# Get all todos
+curl localhost:9090/api/todos  | jq .
+
+# Create todo
+curl localhost:9090/api/todos -X POST -H 'Content-Type: application/json' --data '{"body":"Learn Python"}'
+
+# Update todo
+curl localhost:9090/api/todos/670d5714116417614eaa6c8e -X PATCH -H 'Content-Type: application/json'
+
+# Delete todo
+curl localhost:9090/api/todos/670d5714116417614eaa6c8e -X DELETE -H 'Content-Type: application/json'
